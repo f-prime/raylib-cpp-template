@@ -27,6 +27,13 @@ then build with
 
 `make build-wasm32`
 
+To view it in the browser...
+
+`cd web`
+`python3 -m http.server 8080`
+
+Then go to http://localhost:8080/game.html
+
 ### Possible error during compilation
 
 At the time of writing this, I was not able to link raylib with emscripten version >3.0 due to the following warning.
@@ -42,8 +49,6 @@ Even though the .wasm file is generated, you'll notice a browser error along the
 To work around this, you'll need to install emscripten version 2.0.0 via the sdk via the `./emsdk install 2.0.0` command followed by the `./emsdk activate 2.0.0` command. On a Mac you may be required to run this command with Rosetta.
 
 When emscripten 2.0.0 is setup simply run the build command again.
-
-
 
 ## Building for Windows
 

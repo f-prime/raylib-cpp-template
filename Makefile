@@ -19,7 +19,7 @@ PLATFORM_DESKTOP := -D PLATFORM_DESKTOP
 MAC_LIBS := -L ./lib/mac-x86_64 -l raylib -rpath ./lib/mac-x86_64
 MAC_OUT_FILE := $(MAC_FOLDER)/$(OUT) 
 
-WEB_LIBS := ./lib/web/libraylib.a  
+WEB_LIBS := ./lib/wasm32/libraylib.a  
 WEB_OUT_FILE := $(WEB_FOLDER)/$(OUT).html
 WEB_FLAGS := --preload-file assets \
 	     -DGRAPHICS_API_OPENGL_ES2 \
