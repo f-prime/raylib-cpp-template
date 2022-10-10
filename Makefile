@@ -33,7 +33,7 @@ WEB_FLAGS := --preload-file assets \
 
 OPTIMIZATIONS := -Os
 
-SOURCE_FILES := src/main.cpp
+SOURCE_FILES := $(shell ls src/*.cpp) 
 
 build-macos:
 	mkdir -p $(MAC_FOLDER) && $(CPP) $(CPP_VERSION) $(MAC_LIBS) $(HEADERS) $(MAC_FLAGS) $(OPTIMIZATIONS) -o $(MAC_OUT_FILE) $(PLATFORM_DESKTOP) $(SOURCE_FILES)
